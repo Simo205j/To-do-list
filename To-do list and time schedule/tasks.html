@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="Navbar.css">
+    <link rel="stylesheet" href="tasks.css" />
+    <script src="tasks.js" defer></script>
+    <script src="drag_tasks.js" defer></script>
+    
+</head>
+<body>
+    <header>
+        <div class="Navbar">
+            <div class="logo"> <a href="#">Web Dev Creative</a></div>
+            <ul class="links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="tasks.html">Tasks</a></li>
+                <li><a href="Schedule">Schedule</a></li>
+            </ul>
+            <a href="#" class="action_btn">Get Started</a>
+            <div class="toggle_btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+        <div class="board">
+            <form id="todo-form">
+              <input type="text" placeholder="New TODO..." id="todo-input" />
+              <button type="submit">Add +</button>
+            </form>
+      
+            <div class="lanes">
+              <div class="swim-lane" id="todo-lane">
+                <h3 class="heading">TODO</h3>
+      
+                <p class="task" draggable="true">Mertz er grim</p>
+                <p class="task" draggable="true">Penis </p>
+                <p class="task" draggable="true">Kralle er gay</p>
+              </div>
+      
+              <div class="swim-lane">
+                <h3 class="heading">Doing</h3>
+      
+                <p class="task" draggable="true">Jones er en cunt</p>
+              </div>
+      
+              <div class="swim-lane">
+                <h3 class="heading">Done</h3>
+      
+                <p class="task" draggable="true">Penis</p>
+        <div class="dropdown_menu">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="tasks.html">Tasks</a></li>
+            <li><a href="Schedule">Schedule</a></li>
+            <li><a href="#" class="action_btn">Get Started</a></li>
+        </div>
+        
+    </header>
+        <script>
+            const toggleBtn = document.querySelector('.toggle_btn')
+            const toggleBtnIcon = document.querySelector('.toggle_btn i')
+            const dropdown_menu = document.querySelector('.dropdown_menu')
+
+            toggleBtn.onclick = function() {
+                dropdown_menu.classList.toggle('open')
+                const isOpen = DropdownMenu.classList.contains('open')
+                
+                toggleBtnIcon.classList = isOpen
+                ? 'fa-solid fa-xmark'
+                : 'fa-solid fa-bars'
+            }
+        </script>
+</body>
+</html>
